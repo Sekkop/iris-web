@@ -83,11 +83,26 @@
                                             <div class="form-group mt--2">
                                                     <button type="button" class="float-right icon-note btn btn-circle btn-sm mt-2" onclick="edit_in_event_desc();" >
                                                     </button>
+                                                    <button type="button" data-toggle="collapse" href="#collapseFormatLog" class="float-right btn btn-circle btn-sm mt-2" onclick="toggle_auto_detect();" >
+                                                        <i class="fa-solid fa-gears"></i>
+                                                    </button>
                                                     <button type="button" style="display: none;" class="btn btn-dark btn-sm float-right mr-2 mt-2"
                                                             onclick="preview_event_description();" id="event_preview_button"><i class="fa-solid fa-eye"></i></button>
                                             </div>
                                             <div class="row">
                                                 <div class="col mb--2 ml--2" id="event_edition_btn" style="display:none;">
+                                                </div>
+                                            </div>
+                                            <div class="collapse" id="collapseFormatLog">
+                                                <div class="card card-body">
+                                                    <label for="event_type" class="placeholder"> Event Type </label>
+                                                    <select id="selectEventTypeLogFormat" name="event_type">
+                                                        <option value="velo_evtx">Velo Evtx</option>
+                                                        <option value="win_evtx">Win Evtx</option>
+                                                        <option value="hayabusa">Hayabusa</option>
+                                                        <option value="unknown">Unknown</option>
+                                                    </select>
+                                                    <button type="button" data-toggle="collapse" href="#collapseFormatLog"  class="btn btn-dark btn-sm mt-2" onclick="logFormat();">Format</button>
                                                 </div>
                                             </div>
                                             <div class="row" style="margin-left:0px;">
