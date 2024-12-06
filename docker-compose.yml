@@ -66,9 +66,29 @@ services:
 
 volumes:
   iris-downloads:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./logs/
   user_templates:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./templates/
   server_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./server_data/
   db_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./db/
 
 networks:
   iris_backend:
